@@ -20,7 +20,7 @@ app.use(bodyparser.json());
 app.use(cors())
 
 app.get('/',(req,res) => {
-	res.send(database.users);
+	res.send('its working bruh');
 })
 app.post('/SignIn',(req,res) => {
 	db.select('email','hash').from('login')
@@ -111,7 +111,7 @@ app.put("/image", (req,res) => {
 .catch(err => res.status(400).json('Not Found Any Entries'))
 })
 
-app.listen(3000,() =>{
+app.listen(process.env.PORT || 3000,() =>{
 
-	console.log('app is working on port 3000');
+	console.log(`app is working on port ${process.env.PORT}`);
 })
