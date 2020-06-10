@@ -90,14 +90,7 @@ app.get('/profile/:id',(req,res) => {
 	
 })
 
-const Clarifai =require('clarifai')
-//Your api should be here
-const app1 = new Clarifai.App({
-  apiKey:'3dcd62482092441d9a7de648efdb466d'
-});
-const handleapi=(req,res) =>{
-    app1.models.predict(Clarifai.FACE_DETECT_MODEL,req.body.input)
-}
+
 
 
 app.put("/image", (req,res) => {
