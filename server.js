@@ -8,7 +8,7 @@ const db = knex({
 	client: 'pg',
   version: '7.2',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-vertical-12170',
     user : 'postgres',
     password : '7000353872',
     database : 'smart-brain'
@@ -89,9 +89,6 @@ app.get('/profile/:id',(req,res) => {
 		.catch(err => res.status(400).json('error getting user')) 
 	
 })
-
-
-
 
 app.put("/image", (req,res) => {
 	const { id } = req.body;
